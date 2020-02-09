@@ -76,4 +76,4 @@ def ml_loop():
 #             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
 #         else:
 #             comm.send_instruction(scene_info.frame, PlatformAction.NONE)
-            comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
+        comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
