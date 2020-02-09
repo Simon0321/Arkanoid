@@ -63,17 +63,17 @@ def ml_loop():
 
         # 3.3. Put the code here to handle the scene information
 
-#         ball_x_end = compute_x_end(scene_info.ball, ball_last)
-#         ball_last = scene_info.ball
-#         move  = (ball_x_end) - (scene_info.platform[0]+20)
+        ball_x_end = compute_x_end(scene_info.ball, ball_last)
+        ball_last = scene_info.ball
+        move  = (ball_x_end) - (scene_info.platform[0]+20)
         # motion direction of ball
         # compute the location of falling
 
         # 3.4. Send the instruction for this frame to the game process
-#         if move > 0:
-#             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
-#         elif move < 0:
-#             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
-#         else:
-#             comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
-        comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
+        if move > 0:
+            comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
+        elif move < 0:
+            comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
+        else:
+            comm.send_instruction(scene_info.frame, PlatformAction.MOVE_LEFT)
+#         comm.send_instruction(scene_info.frame, PlatformAction.MOVE_RIGHT)
